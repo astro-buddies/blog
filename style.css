@@ -2,6 +2,37 @@ body {
   background-color: #fcf5e1;
 }
 
+.container {
+    margin-left: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    column-gap: 10%;                  
+    align-items: start;                
+}
+
+.container_about {
+    margin-left: 15%;
+    margin-right: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
+  /* this keeps the _row_ from stretching taller than its content */
+  align-items: start;
+}
+
+.image-cell {
+  /* center the image horizontally & vertically within its grid cell */
+  justify-self: center;
+  align-self: center;
+}
+
+.image-cell img {
+  /* if you really want it to scale with the column width, keep this */
+  max-width: 100%;
+  height: auto;
+  display: block; /* makes margin:auto centering more reliable */
+}
+
 h1 {
   color: #f7320f;
   text-align: center;
@@ -20,11 +51,72 @@ h2 {
   font-size: 20px;
 }
 
+h3 {
+  color: #f7320f;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.title a {
+    color: #f7320f;
+    text-align: left;
+    font-family: 'Georgia', serif;
+    font-weight: 200;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+h4 {
+  color: #333;
+  text-align: left;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  font-weight: 200;
+  font-size: 15px;
+}
+
 hr {
   border: 0;
   height: 1px;
   background-color: #f7320f;
   margin: 20px auto;
+}
+
+.post_hr {
+  border: 0;
+  height: 2px;
+  background-color: #f7320f;
+  margin: 20px auto;
+}
+
+.post {
+    background-color: #fcf5e1;
+    border: #f7320f 2px solid;
+    padding: 20px;
+    margin-top: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+}
+
+.archive {
+    background-color: #fcf5e1;
+    border-top: #f7320f 1px solid;
+    border-bottom: #f7320f 1px solid;
+    padding: 20px;
+    margin-top: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 p {
@@ -34,15 +126,50 @@ p {
   font-size: 16;
   font-weight: 100;
   line-height: 1.6;
-  margin: 20px auto;
+  
   max-width: 800px;
+}
+
+.button a {  
+    margin-top: 15%;
+    background-color: #fcf5e1;
+    border: #f7320f 2px solid;
+    color: #f7320f;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button a:hover {  
+    background-color: #f7320f;
+    border: #fcf5e1 2px solid;
+    color: #fcf5e1;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.post_text {
+  color: #333;
+  text-align: left;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  font-weight: 50;
+  line-height: 1.6;
+  max-width: 100%;
 }
 
 .intro_box {
     background-color: #fcf5e1;
     border-bottom: #f7320f 1px solid;
     padding: 20px;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-right: auto;
     margin-left: auto;
     max-width: 800px;
